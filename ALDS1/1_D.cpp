@@ -2,15 +2,15 @@
 using namespace std;
 
 int n, num;
-int Min = 2000000000, ans = -Min;
+int minv = INT_MAX, maxv = INT_MIN;
 
 int main() {
     cin >> n;
     while(n--) {
         cin >> num;
-        ans = max(ans, num - Min);
-        Min = min(Min, num);
+        maxv = max(maxv, num - minv);
+        minv = min(minv, num);
     }
-    cout << ans << endl;
+    cout << maxv << endl;
     return 0;
 }
