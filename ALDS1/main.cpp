@@ -1,7 +1,10 @@
-#include <bits/stdc++.h>
-using namespace std;
+int n, num;
+int minv = INT_MAX, maxv = INT_MIN;
 
-int main() {
-    
-    return 0;
+cin >> n;
+while(n--) {
+    cin >> num;
+    maxv = max(maxv, num - minv);
+    minv = min(minv, num);
 }
+cout << maxv << endl;
